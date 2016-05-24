@@ -98,7 +98,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.synced_folder "data", "/home/vagrant/data",
 		create:true
 
-	config.vm.provision "shell", inline: "python /vagarant/data/mircs-geogenealogy/mircsgeo/manage.py runserver 0.0.0.0:8000"
+	config.vm.provision "shell", inline: "export PATH=/opt/anaconda/bin:$PATH; source /home/vagrant/.bashrc; python ~/data/mircs-geogenealogy/mircsgeo/manage.py runserver 0.0.0.0:8000 &",
+		run: "always",
+		privileged:false
 
 	# Disable automatic box update checking. If you disable this, then
 	# boxes will only be checked for updates when the user runs
