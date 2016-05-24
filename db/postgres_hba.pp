@@ -35,6 +35,6 @@ postgresql::server::pg_hba_rule { 'allow application network to access app datab
 	type        => 'host',
 	database    => 'postgres',
 	user        => 'postgres',
-	address     => '192.168.56.0/24',
+	address     => '192.168.20.0/24',
 	auth_method => 'md5',
 }

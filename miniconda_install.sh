@@ -3,7 +3,7 @@
 # Download and install the latest Miniconda
 
 miniconda=Miniconda-latest-Linux-x86.sh
-condapackages="django pandas Jinja2"
+condapackages="django pandas Jinja2 sqlalchemy"
 
 cd /vagrant
 if [[ ! -f $miniconda ]]; then
@@ -16,6 +16,7 @@ sudo chown -R vagrant /opt/anaconda
 #Install conda packages
 /opt/anaconda/bin/conda config --add channels IOOS
 /opt/anaconda/bin/conda install --yes -q -c https://conda.anaconda.org/ioos $condapackages
+/opt/anaconda/bin/pip install aldjemy
 
 
 # Add the Anaconda python executables to the path for the vagrant user
