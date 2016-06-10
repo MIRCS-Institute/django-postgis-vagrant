@@ -1,2 +1,3 @@
 -- Create the postgis functions
-CREATE EXTENSION postgis SCHEMA public;
+CREATE SCHEMA mircs;
+CREATE EXTENSION postgis SCHEMA mircs;

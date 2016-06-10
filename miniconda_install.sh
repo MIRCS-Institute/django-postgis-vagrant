@@ -3,11 +3,11 @@
 # Download and install the latest Miniconda
 
 miniconda=Miniconda-latest-Linux-x86.sh
-condapackages="django pandas Jinja2 sqlalchemy"
+condapackages="django pandas Jinja2 sqlalchemy psycopg2"
 
 cd /vagrant
 if [[ ! -f $miniconda ]]; then
-		wget --quiet http://repo.continuum.io/miniconda/$miniconda
+    wget --quiet http://repo.continuum.io/miniconda/$miniconda
 fi
 chmod +x $miniconda
 sudo ./$miniconda -b -p /opt/anaconda
