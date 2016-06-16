@@ -3,7 +3,7 @@
 # Download and install the latest Miniconda
 
 miniconda=Miniconda-latest-Linux-x86.sh
-condapackages="django pandas Jinja2 sqlalchemy psycopg2"
+condapackages="django pandas Jinja2 sqlalchemy psycopg2 xlrd"
 
 cd /vagrant
 if [[ ! -f $miniconda ]]; then
