@@ -12,3 +12,12 @@ To run the project do the following:
 8. Run vagrant provision
 9. To Stop the server run: vagrant halt
 10. To Start the serve run: vagrant up
+
+
+#Restarting Django to see Debug Output
+1. 'vagrant ssh' to get into the box after having executed 'vagrant up'
+2. 'ps aux | grep py' to list running Python processes
+3. Copy the first of the two listed commands to your clipboard
+4. run 'kill -9 pid1 pid2' where pid1 and pid2 are the process IDs given in the 'ps aux' output
+5. paste the command from your clipboard and execute
+6. You should now see django output in your terminal
