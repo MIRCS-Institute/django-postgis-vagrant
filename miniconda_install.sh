@@ -18,6 +18,7 @@ sudo chown -R vagrant /opt/anaconda
 /opt/anaconda/bin/conda install --yes -q -c https://conda.anaconda.org/ioos $condapackages
 /opt/anaconda/bin/pip install aldjemy
 /opt/anaconda/bin/pip install folium
+/opt/anaconda/bin/pip install geoalchemy2
 
 
 # Add the Anaconda python executables to the path for the vagrant user
